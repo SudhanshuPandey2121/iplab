@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM manipulation</title>
+</head>
+<body>
+    <button id="btn">Click me</button>
+    <p id="text">This is the original text.</p> <!-- Added the 'text' element -->
+
+    <script>
+      let text = document.getElementById('text');
+      let button = document.getElementById('btn');
+
+      button.addEventListener('click', () => {
+          text.innerHTML = "Hey! I am the changed text";
+      });
+    </script>
+</body>
+</html>

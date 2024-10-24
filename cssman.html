@@ -1,0 +1,34 @@
+CSS manipulation
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS manipulation</title>
+</head>
+<body>
+    <h1>Click on these buttons to change the background colour</h1>
+    <div class="container">
+        <button id="red" >RED</button>
+        <button id="yellow">YELLOW</button>
+        <button id="green">GREEN</button>
+    </div>
+    <script>
+let red = document.getElementById('red');
+let yellow = document.getElementById('yellow');
+let green = document.getElementById('green');
+
+red.addEventListener('click', ()=>{
+    document.body.style.backgroundColor = 'red';
+});
+yellow.addEventListener('click', ()=>{
+    document.body.style.backgroundColor = 'yellow';
+});
+green.addEventListener('click', ()=>{
+    document.body.style.backgroundColor = 'green';
+});
+    </script>
+</body>
+</html>
+

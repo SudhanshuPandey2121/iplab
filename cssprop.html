@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Properties</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Oswald:wght@200..700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Arima", system-ui;
+            box-sizing: border-box;
+        }
+
+        .outer-container {
+            width: 900px;
+            height: 600px;
+            background-color: rgb(255, 0, 0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 100px;
+        }
+
+        .inner-container {
+            width: 200px;
+            height: 200px;
+            background-color: hsl(120, 100%, 50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .in {
+            width: 40px;
+            height: 40px;
+            background-color: #000;
+            transition: all 0.5s ease 1s;
+        }
+
+        .in:hover {
+            transform: rotate(45deg);
+            animation: move 3s infinite 2s alternate;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateX(0px);
+            }
+            100% {
+                transform: translateX(50px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello, I am the title</h1>
+    
+    <div class="outer-container">
+        <div class="inner-container in1">
+            <div class="in in1-1"></div>
+            <div class="in in1-2"></div>
+            <div class="in in1-3"></div>
+        </div>
+        <div class="inner-container in2">
+            <div class="in in2-1"></div>
+            <div class="in in2-2"></div>
+            <div class="in in2-3"></div>
+        </div>
+        <div class="inner-container in3">
+            <div class="in in3-1"></div>
+            <div class="in in3-2"></div>
+            <div class="in in3-3"></div>
+        </div>
+    </div>
+</body>
+</html>
